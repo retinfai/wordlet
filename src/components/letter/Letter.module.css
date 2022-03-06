@@ -1,0 +1,28 @@
+:root{
+    --neutral:rgb(236, 219, 219);
+    --correct:rgb(40, 175, 62);
+    --semiCorrect: rgb(221, 161, 48);
+    --incorrect: rgb(121, 121, 121);
+    --keyboard: rgb(245, 238, 238);
+} 
+.letter {
+    margin: 0.3rem 1rem;
+    height: 4em;
+    width: 4em;
+    display: inline-block;
+    background-color:var(--neutral);
+    overflow: hidden;
+    
+    text-align: center;
+    line-height: 4em;
+  
+    border-radius: 15%;
+    border: solid none;
+    transition: background-color 0.2s;
+  }
+
+  .letter p {
+    margin: 0;
+    font-size: xx-large;  
+    font-weight: 700;
+  }
