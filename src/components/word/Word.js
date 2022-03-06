@@ -1,6 +1,6 @@
 import Letter from "../letter/Letter"
 export default function Line({ length, gridLine, lineNum, colorLine }) {
-    // console.log("Line:", guessObj[1])
+
     return (
         <div>
             {

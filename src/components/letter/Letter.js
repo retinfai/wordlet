@@ -5,8 +5,6 @@ export default function Letter({value,color}){
     // console.log("  Letter:", guess)
     function clicked(){
         // console.log(guess.guess)
-        console.log(guess)
-        console.log(setGuess)
     }
 
     return(

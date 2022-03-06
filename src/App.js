@@ -8,7 +8,7 @@ const Typo = require("typo-js");
 
 // import "Typo.js"
 function App() {
-  
+
   const [word,setWord] = useState(words[Math.floor(Math.random() * 178187)])
   console.log(word)
   const [grid, setGrid] = useState(Array(6).fill(0).map(x => Array(word.length).fill("")))
@@ -112,7 +112,6 @@ function App() {
               colorLine={color[index]}
               gridLine={grid[index]}
               key={"line-" + index.toString()}
-              guessObj={[guess,setGuess]}
             />
           )
         })
