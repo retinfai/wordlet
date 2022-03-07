@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/wordlet/static/css/main.07b6cbff.css",
-    "main.js": "/wordlet/static/js/main.8b89276c.js",
+    "main.css": "/wordlet/static/css/main.2501bb1d.css",
+    "main.js": "/wordlet/static/js/main.6135015b.js",
     "static/js/787.649cbe89.chunk.js": "/wordlet/static/js/787.649cbe89.chunk.js",
     "index.html": "/wordlet/index.html",
-    "main.07b6cbff.css.map": "/wordlet/static/css/main.07b6cbff.css.map",
-    "main.8b89276c.js.map": "/wordlet/static/js/main.8b89276c.js.map",
+    "main.2501bb1d.css.map": "/wordlet/static/css/main.2501bb1d.css.map",
+    "main.6135015b.js.map": "/wordlet/static/js/main.6135015b.js.map",
     "787.649cbe89.chunk.js.map": "/wordlet/static/js/787.649cbe89.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.07b6cbff.css",
-    "static/js/main.8b89276c.js"
+    "static/css/main.2501bb1d.css",
+    "static/js/main.6135015b.js"
   ]
 }
