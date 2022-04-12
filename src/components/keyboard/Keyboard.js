@@ -1,7 +1,7 @@
 import Letter from "../letter/Letter"
 import styles from "./Keyboard.module.css"
 import React from 'react'
-export default function Keyboard({color}) {
+export default function Keyboard({color,guess,guessBar}) {
 
     const letters = []
 
@@ -18,7 +18,7 @@ export default function Keyboard({color}) {
             {
                 letters.map((letter, index )=> {
                     return(
-                        <Letter value={letter} className={styles.key} key={letter+"-key"} color={color[index]}/>
+                        <Letter value={letter} className={styles.key} key={letter+"-key"} color={color[index]} guessObj={guess} guessBarRef={guessBar}/>
                     )
                 })
             }

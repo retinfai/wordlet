@@ -12,7 +12,7 @@
     display: inline-block;
     background-color:var(--neutral);
     overflow: hidden;
-    
+    cursor: pointer;
     text-align: center;
     line-height: 4em;
   

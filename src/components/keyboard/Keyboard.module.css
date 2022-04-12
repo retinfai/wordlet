@@ -1,3 +1,8 @@
 .key{
     margin: 0 0;
+    cursor: pointer;
+    color: white;
+}
+
+.key :hover{
 }

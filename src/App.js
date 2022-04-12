@@ -1,15 +1,12 @@
-import { createRef, useEffect, useRef, useState } from 'react';
-import { findDOMNode } from 'react-dom';
+import { createRef, useEffect, useState } from 'react';
 import './App.css';
 import Line from './components/word/Word';
 import Keyboard from './components/keyboard/Keyboard';
 import words from "./words";
-const Typo = require("typo-js");
-
-// import "Typo.js"
+var wordList = require('an-array-of-english-words')
 function App() {
-
-  const [word,setWord] = useState(words[Math.floor(Math.random() * 178187)])
+  // console.log(wordList)
+  const [word,setWord] = useState(wordList[Math.floor(Math.random() * 178187)])
   console.log(word)
   const [grid, setGrid] = useState(Array(6).fill(0).map(x => Array(word.length).fill("")))
   const [guess, setGuess] = useState("")
@@ -30,13 +27,16 @@ function App() {
   },[guess])
 
   useEffect(() => { // guessNum changes
+    if(guessNum === 6){
+      document.getElementById("correctWord").style.visibility = "visible";
+    }
     setGuess("")
     guessBar.current.focus()
   },[guessNum])
 
   function onSubmit(){
 
-    if(guess.length < word.length || !words.includes(guess.toLowerCase())){
+    if(guess.length < word.length || !wordList.includes(guess.toLowerCase())){
       console.log("Nothing Entered")
       return
     }
@@ -101,6 +101,7 @@ function App() {
   return (
     <div className="App">
       <h1>Wordlet!</h1>
+      <p id="correctWord">The correct word was {word}</p>
       {/* <div id="overlay"></div> */}
       <div onClick={() => guessBar.current.focus()}>
       {
@@ -120,7 +121,8 @@ function App() {
 
       <input className="guessBar" ref={guessBar} value={guess}type="text" maxLength={word.length} onChange={inputOnChange} onKeyDown={keyDown}/>
       <br></br>
-      <Keyboard color={keyboard}/>
+      <Keyboard color={keyboard} guess={[guess,setGuess]} guessBar={guessBar}/>
+      {/* <GameOver/> */}
     </div>
   );
   

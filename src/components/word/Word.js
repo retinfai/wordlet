@@ -1,6 +1,5 @@
 import Letter from "../letter/Letter"
-export default function Line({ length, gridLine, lineNum, colorLine }) {
-
+export default function Line({ length, gridLine, lineNum, colorLine}) {
     return (
         <div>
             {

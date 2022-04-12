@@ -1,10 +1,15 @@
-import { useEffect } from 'react'
 import styles from './Letter.module.css'
 
-export default function Letter({value,color}){
-    // console.log("  Letter:", guess)
+export default function Letter({value,color, guessObj,guessBarRef}){
+    const guess = guessObj ? guessObj[0] : undefined
+    const setGuess = guessObj ? guessObj[1] : undefined
+
     function clicked(){
-        // console.log(guess.guess)
+        if(guessObj === undefined){
+            return
+        }
+        setGuess(guess+value)
+        guessBarRef.current.focus()
     }
 
     return(
